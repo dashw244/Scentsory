@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SCENTSORY | Nostalgic Mint Colognes</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: linear-gradient(135deg, #7efff5, #6bdfc9);
+      color: #033a3e;
+      text-align: center;
+      padding: 60px 20px 30px;
+      position: relative;
+      z-index: 2;
+    }
+
+    header img {
+      width: 100px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin: 0;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+      font-style: italic;
+    }
+
+    .product-section {
+      display: flex;
+      flex-direction: column;
+      padding: 40px 20px;
+      background-color: white;
+      position: relative;
+      z-index: 2;
+    }
+
+    .product {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 40px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .product img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    }
+
+    .product h2 {
+      font-size: 1.8em;
+      margin-top: 20px;
+      color: #02665c;
+    }
+
+    .product p {
+      font-size: 1em;
+      text-align: center;
+      padding: 0 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background-color: #e0f7f3;
+      font-size: 0.9em;
+      color: #555;
+      position: relative;
+      z-index: 2;
+    }
+
+    @media (min-width: 768px) {
+      .product-section {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .product {
+        flex: 1;
+        margin: 20px;
+      }
+    }
+  </style>
+  
+<style>
+  .leaf {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4f/Mint_leaf_icon.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: fall linear infinite;
+    z-index: 1;
+    opacity: 0.7;
+  }
+
+  @keyframes fall {
+    0% {
+      transform: translateY(-50px) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(120vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    for (let i = 0; i < 15; i++) {
+      const leaf = document.createElement('div');
+      leaf.className = 'leaf';
+      leaf.style.left = Math.random() * 100 + 'vw';
+      leaf.style.animationDuration = 5 + Math.random() * 5 + 's';
+      leaf.style.animationDelay = Math.random() * 5 + 's';
+      document.body.appendChild(leaf);
+    }
+  });
+</script>
+
+</head>
+<body>
+  <header>
+    <img src="scentsory-logo.png" alt="SCENTSORY Logo" />
+    <h1>SCENTSORY</h1>
+    <p>Mint Memories, Bottled</p>
+  </header>
+
+  <section class="product-section">
+    <div class="product">
+      <img src="mint-gatorade-bottle.png" alt="Mint Gatorade Cologne" />
+      <h2>Mint Gatorade Cologne</h2>
+      <p>
+        Dive into a crisp tidal wave of icy mint, zapped with electrolyte zest. It's hydration—bottled for your pulse points. Perfect for the gym rat, sideline coach, or nostalgic athlete.
+      </p>
+    </div>
+
+    <div class="product">
+      <img src="mint-floss-bottle.png" alt="Mint Floss Cologne" />
+      <h2>Mint Floss Cologne</h2>
+      <p>
+        An ultra-fresh oral mint hit with clean-tingle precision. Sharp, hygienic, and unexpectedly confident—this flossy fantasy turns dental into decadent.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 SCENTSORY Fragrance Co. | Contact: hello@scentsorymint.com | IG: @scentsory.mint
+  </footer>
+</body>
+</html>
